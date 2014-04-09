@@ -4,7 +4,7 @@
 <% @posts.each do |post| %>
 
   <li id="make-big">
-    <p>Total Score: <%= post.total_score %></p>
+    <p>Total Score: <%= post.score_attrition %></p>
     <%= form_for post do |f| %>
       <%= f.hidden_field :link %>
       <%= f.hidden_field :time %>

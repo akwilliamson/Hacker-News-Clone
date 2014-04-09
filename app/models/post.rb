@@ -3,8 +3,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :link
   validates_presence_of :description
 
-  def
-
-  end
-
+  # def score_attrition
+  #   number = (Time.now - self.created_at)/1000
+  #   self.total_score -= number
+  # end
 end
