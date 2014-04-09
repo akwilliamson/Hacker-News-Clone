@@ -1,0 +1,31 @@
+<h1>Posts</h1>
+
+<ul>
+<% @posts.each do |post| %>
+
+  <li id="make-big">
+    <p>Total Score: <%= post.total_score %></p>
+    <%= form_for post do |f| %>
+      <%= f.hidden_field :link %>
+      <%= f.hidden_field :time %>
+      <%= f.hidden_field :description %>
+      <%= f.hidden_field :total_score, value: post.total_score.to_i + 1 %>
+      <button class="btn btn-default btn-sm glyphicon glyphicon-thumbs-up thumb-form pull-left"></button>
+    <% end %>
+
+    <%= form_for post do |f| %>
+      <%= f.hidden_field :link %>
+      <%= f.hidden_field :time %>
+      <%= f.hidden_field :description %>
+      <%= f.hidden_field :total_score, value: post.total_score.to_i - 1 %>
+      <button class="btn btn-default btn-sm glyphicon glyphicon-thumbs-down thumb-form pull-left"></button>
+    <% end %>
+    <%= link_to post.description, post.link %><br>
+  </li>
+
+    <ul>
+      <li><%= link_to "Comments (#{post.comments.length})", post_path(post.id) %></li><hr>
+    </ul>
+
+<% end %>
+</ul>

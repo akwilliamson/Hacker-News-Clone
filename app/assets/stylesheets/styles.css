@@ -1,0 +1,19 @@
+.page {
+  margin-top: 60px;
+}
+
+.form-control {
+  width: 25%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.thumb-form {
+  display: inline;
+}
+
+#make-big {
+  font-size: 20px;
+}

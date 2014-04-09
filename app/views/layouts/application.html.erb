@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HackerClone</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container page">
+<div class = "navbar navbar-default navbar-fixed-top">
+  <%= link_to "Home", posts_path, class: "navbar-text pull-left" %>
+  <%= link_to "Comments", comments_path, class: "navbar-text pull-left" %>
+  <%= link_to "Create new Post", new_post_path, class: "navbar-text pull-left" %>
+</div>
+
+<%= flash[:alert] %>
+<%= flash[:notice] %>
+
+<%= yield %>
+
+</div>
+
+</body>
+</html>
